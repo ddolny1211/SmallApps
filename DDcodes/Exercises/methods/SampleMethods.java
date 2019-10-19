@@ -36,4 +36,24 @@ public class SampleMethods {
             return false;
         }
     }
+
+    //Method returning argument to power 3
+    public int powerTo3(int number){
+        return number*number*number;
+    }
+
+    //Method returning sqrt of an argument
+    public double sqrtOfArgument(double number){
+        return Math.sqrt(number);
+    }
+
+    //Method that returning of triangle is rectangular
+    public boolean isTriangleRectangular(int firstParam, int secondParam, int thirdParam){
+        if((firstParam*firstParam) + (secondParam*secondParam)
+                == thirdParam*thirdParam){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
