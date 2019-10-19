@@ -8,8 +8,8 @@ public class SampleMethods {
     }
 
     //Method returning your name
-    public void getName(String name){
-        System.out.println("Hi "+name+"!");
+    public void getName(String name) {
+        System.out.println("Hi " + name + "!");
     }
 
     //Method returning add, sub and multiply of two parameters
@@ -20,39 +20,39 @@ public class SampleMethods {
     }
 
     //Method checking if number is even
-    public boolean isNumberEven(int number){
-        if(number%2==0){
+    public boolean isNumberEven(int number) {
+        if (number % 2 == 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
     //Method checking if number is able to division by 3 and 5
-    public boolean isNumberAbleToDivide(int number){
-        if(number%3==0 && number%5==0){
+    public boolean isNumberAbleToDivide(int number) {
+        if (number % 3 == 0 && number % 5 == 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
     //Method returning argument to power 3
-    public int powerTo3(int number){
-        return number*number*number;
+    public int powerTo3(int number) {
+        return number * number * number;
     }
 
     //Method returning sqrt of an argument
-    public double sqrtOfArgument(double number){
+    public double sqrtOfArgument(double number) {
         return Math.sqrt(number);
     }
 
     //Method that returning of triangle is rectangular
-    public boolean isTriangleRectangular(int firstParam, int secondParam, int thirdParam){
-        if((firstParam*firstParam) + (secondParam*secondParam)
-                == thirdParam*thirdParam){
+    public boolean isTriangleRectangular(int firstParam, int secondParam, int thirdParam) {
+        if ((firstParam * firstParam) + (secondParam * secondParam)
+                == thirdParam * thirdParam) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
