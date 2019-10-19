@@ -5,12 +5,12 @@ public class Rectangle {
     private double width;
     private double height;
 
-    public double getField(){
-        return getHeight()*getWidth();
+    public double getField() {
+        return getHeight() * getWidth();
     }
 
-    public double getCircuit(){
-        return (2*getWidth())+(2*getHeight());
+    public double getCircuit() {
+        return (2 * getWidth()) + (2 * getHeight());
     }
 
     public Rectangle(double width, double height) {
