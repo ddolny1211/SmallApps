@@ -1,0 +1,3 @@
+Hash function - 
+
+Program read hash.txt file where and checks difference of bits each pair
