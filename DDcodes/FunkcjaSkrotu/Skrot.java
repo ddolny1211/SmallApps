@@ -26,6 +26,7 @@ public class Skrot {
             bufferedWriter.write("\n");
         }
         bufferedWriter.close();
+
     }
 
     private static String[] readFromFile() throws FileNotFoundException {
@@ -54,14 +55,14 @@ public class Skrot {
         int bitsLen = line1.length() * 4;
         int maxNum = firstLine.length();
         int differentBitCounter = 0;
-        for (int i = 0; i < maxNum; i++) {
-            if (firstLine.charAt(i) != secondLine.charAt(i)) {
+        for (int i = 0; i < maxNum-1; i+=2) {
+
+            if (firstLine.charAt(i) != secondLine.charAt(i) || firstLine.charAt(i+1)!= secondLine.charAt(i+1)) {
                 differentBitCounter++;
             }
         }
-        int result = (differentBitCounter * 100) / maxNum;
-        //System.out.println("Liczba bitow rozniaca wyniki : "+differentBitCounter/2+" tj. "+result+"% z "+bitsLen);
-        return "Liczba bitow rozniaca wyniki : " + differentBitCounter / 2 + " tj. " + result + "% z " + bitsLen;
+        int result = (differentBitCounter * 100) / bitsLen;
+        return "Liczba bitow rozniaca wyniki : " + differentBitCounter + " tj. " + result + "% z " + bitsLen;
 
     }
 
@@ -71,7 +72,6 @@ public class Skrot {
         for (byte b : bytesLine) {
             stringBuilder.append(to8bitBinary(b));
         }
-        //System.out.println(stringBuilder.toString());
         return stringBuilder.toString();
     }
 
@@ -85,12 +85,9 @@ public class Skrot {
             }
             b = (byte) (b / 2);
         }
-        if (binary.length() == 6) {
-            binary.append("00");
-        } else if (binary.length() == 7) {
+        if (binary.length() < 7) {
             binary.append("0");
         }
-        //System.out.println(binary.reverse().toString());
         return binary.reverse().toString();
     }
 }
